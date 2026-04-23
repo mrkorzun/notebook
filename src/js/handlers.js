@@ -1,4 +1,5 @@
 import { saveTask } from './local-storage-api';
+import { renderTask } from './render-tasks';
 
 export function onHeaderOnSubmit(e) {
   e.preventDefault();
@@ -14,5 +15,6 @@ export function onHeaderOnSubmit(e) {
   }
   const task = { taskNameValue, taskDescriptionValue };
   saveTask(task);
+  renderTask();
   e.target.reset();
 }
