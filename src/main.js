@@ -17,5 +17,7 @@
 
 import { onHeaderOnSubmit } from './js/handlers';
 import { refs } from './js/refs';
+import { onChangeTheme } from './js/theme-switcher';
 
 refs.headerForm.addEventListener('submit', onHeaderOnSubmit);
+refs.themeBtn.addEventListener('click', onChangeTheme);
