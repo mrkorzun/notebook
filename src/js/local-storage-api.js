@@ -13,5 +13,5 @@ const getTheme = () => {
 };
 
 export const saveTheme = theme => {
-  localStorage.setItem('theme', theme); // Просто записуємо рядок, JSON тут навіть не обов'язковий
+  localStorage.setItem('theme', theme);
 };
