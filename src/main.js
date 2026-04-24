@@ -15,9 +15,16 @@
   </li>
 */
 
-import { onHeaderOnSubmit } from './js/handlers';
+import {
+  initHomePage,
+  onHeaderFormSubmit,
+  onTaskListItemClick,
+} from './js/handlers';
 import { refs } from './js/refs';
 import { onChangeTheme } from './js/theme-switcher';
 
-refs.headerForm.addEventListener('submit', onHeaderOnSubmit);
+document.addEventListener('DOMContentLoaded', initHomePage);
+
+refs.headerForm.addEventListener('submit', onHeaderFormSubmit);
+refs.taskList.addEventListener('click', onTaskListItemClick);
 refs.themeBtn.addEventListener('click', onChangeTheme);
